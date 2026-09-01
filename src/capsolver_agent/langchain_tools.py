@@ -38,7 +38,7 @@ except ImportError:
                 "langchain-core is required for LangChain tools. Install with: pip install capsolver-agent[langchain]"
             )
 
-    def Field(*args: Any, **kwargs: Any) -> Any:  # type: ignore[misc]
+    def Field(*args: Any, **kwargs: Any) -> Any:  # type: ignore[no-redef]
         return None
 
 
@@ -108,7 +108,7 @@ if _HAS_LANGCHAIN:
         """
 
         api_key: str = ""
-        _executor: ToolExecutor | None = None  # type: ignore[assignment]
+        _executor: ToolExecutor | None = None
 
         def _get_executor(self) -> ToolExecutor:
             if self._executor is None:
@@ -128,7 +128,7 @@ if _HAS_LANGCHAIN:
             "Solve a captcha using the CapSolver API. Supports reCaptchaV2, "
             "reCaptchaV3, and Cloudflare Turnstile. Returns the solved token."
         )
-        args_schema: Type[BaseModel] = SolveCaptchaInput  # type: ignore[assignment]
+        args_schema: Type[BaseModel] = SolveCaptchaInput
 
         async def _arun(self, **kwargs: Any) -> dict[str, Any]:
             return await self._get_executor().execute("solve_captcha", kwargs)
@@ -141,7 +141,7 @@ if _HAS_LANGCHAIN:
             "Scan a web page and detect which captcha types are present. "
             "Returns a list of detected captcha families. Requires playwright."
         )
-        args_schema: Type[BaseModel] = DetectCaptchasInput  # type: ignore[assignment]
+        args_schema: Type[BaseModel] = DetectCaptchasInput
 
         async def _arun(self, **kwargs: Any) -> dict[str, Any]:
             return await self._get_executor().execute("detect_captchas", kwargs)
@@ -153,7 +153,7 @@ if _HAS_LANGCHAIN:
         description: str = (
             "One-shot: open a page, detect all captchas, solve them, and autofill tokens. Requires playwright."
         )
-        args_schema: Type[BaseModel] = SolveOnPageInput  # type: ignore[assignment]
+        args_schema: Type[BaseModel] = SolveOnPageInput
 
         async def _arun(self, **kwargs: Any) -> dict[str, Any]:
             return await self._get_executor().execute("solve_on_page", kwargs)
@@ -163,7 +163,7 @@ if _HAS_LANGCHAIN:
 
         name: str = "get_balance"
         description: str = "Get the current CapSolver account balance and package information."
-        args_schema: Type[BaseModel] = EmptyInput  # type: ignore[assignment]
+        args_schema: Type[BaseModel] = EmptyInput
 
         async def _arun(self, **kwargs: Any) -> dict[str, Any]:
             return await self._get_executor().execute("get_balance", kwargs)
@@ -173,7 +173,7 @@ if _HAS_LANGCHAIN:
 
         name: str = "get_supported_captchas"
         description: str = "List all captcha types supported by this CapSolver instance."
-        args_schema: Type[BaseModel] = EmptyInput  # type: ignore[assignment]
+        args_schema: Type[BaseModel] = EmptyInput
 
         async def _arun(self, **kwargs: Any) -> dict[str, Any]:
             return await self._get_executor().execute("get_supported_captchas", kwargs)
