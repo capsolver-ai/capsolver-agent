@@ -156,4 +156,4 @@ uv run ruff check src tests   # lint
 
 ## License
 
-ISC
+MIT
