@@ -2,7 +2,7 @@
 
 This guide covers how to integrate CapSolver tools into Python AI frameworks using the `capsolver-agent` package.
 
-If your tool supports the MCP protocol directly (Claude Desktop, Cursor, Windsurf, etc.), see [MCP client configuration](https://github.com/capsolver-ai/mcp-capsolver/blob/main/docs/mcp-integration.md) instead.
+If your tool supports the MCP protocol directly (Claude Desktop, Cursor, Windsurf, etc.), see [MCP client configuration](https://github.com/capsolver-ai/capsolver-mcp/blob/main/docs/mcp-integration.md) instead.
 
 ## Install
 

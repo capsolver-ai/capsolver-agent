@@ -147,8 +147,8 @@ See the [capsolver-ai examples](https://github.com/capsolver-ai/capsolver-ai/tre
 ## Development
 
 ```bash
-git clone https://github.com/capsolver-ai/agent-capsolver.git
-cd agent-capsolver
+git clone https://github.com/capsolver-ai/capsolver-agent.git
+cd capsolver-agent
 uv sync --all-extras          # or: pip install -r requirements-dev.txt
 uv run pytest                 # run tests
 uv run ruff check src tests   # lint

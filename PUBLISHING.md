@@ -28,7 +28,7 @@ Publish `capsolver-core==0.1.0` first. This package depends on
 
 ## Sync to the Official Open-Source Repository
 
-Copy this directory into the official `agent-capsolver` public repository
+Copy this directory into the official `capsolver-agent` public repository
 working tree, then review the diff before committing.
 
 ```bash
