@@ -137,7 +137,7 @@ Browser-based tools require `pip install capsolver-agent[browser]` and `playwrig
 
 ## Integration examples
 
-See the [capsolver-ai examples](https://github.com/capsolver-ai/capsolver-ai/tree/main/examples) for runnable demos:
+See the [capsolver-ai examples](https://github.com/capsolver-ai/capsolver-ai-hub/tree/main/examples) for runnable demos:
 
 - `openai_function_calling.py` — agentic loop with OpenAI function calling
 - `openai_agents.py` — OpenAI Agents SDK with `@function_tool`
