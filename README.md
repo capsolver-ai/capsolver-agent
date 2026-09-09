@@ -2,7 +2,7 @@
 
 Agent integrations for [CapSolver](https://capsolver.com) — framework-agnostic tool definitions and LangChain BaseTool implementations.
 
-See the [capsolver-ai](https://github.com/capsolver-ai/) hub repo for integration examples and the full documentation.
+See the [capsolver-ai-hub](https://github.com/capsolver-ai/capsolver-ai-hub) repo for integration examples and the full documentation.
 
 For framework integration guides (OpenAI, LangChain, LlamaIndex, CrewAI, Google ADK, and more), see [docs/agent-integration.md](docs/agent-integration.md).
 
@@ -137,7 +137,7 @@ Browser-based tools require `pip install capsolver-agent[browser]` and `playwrig
 
 ## Integration examples
 
-See the [capsolver-ai examples](https://github.com/capsolver-ai/capsolver-ai-hub/tree/main/examples) for runnable demos:
+See the [capsolver-ai-hub examples](https://github.com/capsolver-ai/capsolver-ai-hub/tree/main/examples) for runnable demos:
 
 - `openai_function_calling.py` — agentic loop with OpenAI function calling
 - `openai_agents.py` — OpenAI Agents SDK with `@function_tool`
